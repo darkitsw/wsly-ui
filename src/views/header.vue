@@ -73,11 +73,11 @@
         navData: [
           {
             title: '概要',
-            name: 'guide'
+            name: 'installation'
           },
           {
             title: '组件',
-            name: 'component'
+            name: 'color'
           },
           {
             title: '文档',
