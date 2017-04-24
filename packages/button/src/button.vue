@@ -13,7 +13,7 @@
   </button>
 </template>
 <style lang="scss">
-  @import "../../../src/assets/scss/monitor.scss";
+  @import "../../../src/assets/scss/default-theme.scss";
   .ws-button{
     border:1px solid #d8d5d0;
     background-color: #f5f6f7;
@@ -150,9 +150,9 @@
   }
 
   .ws-warp-button .is-disabled{
-    border:1px solid $button_disabel_border !important;
-    background-color: $button_disabel_background_color !important;
-    color: $button_disabel_color !important;
+    border:1px solid $button_disable_border !important;
+    background-color: $button_disable_background_color !important;
+    color: $button_disable_color !important;
     &:hover{
       cursor: not-allowed;
     }
