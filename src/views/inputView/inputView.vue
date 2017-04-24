@@ -11,15 +11,11 @@
 <style lang="scss">
 </style>
 <script>
-  import WSInput from '../../../packages/input'
   export default {
     data () {
       return {
         input1: ''
       }
-    },
-    components: {
-      WSInput
     }
   }
 </script>

@@ -1,2 +1,2 @@
-import WSRadio from './src/radio';
-export default WSRadio;
+import WsRadio from './src/radio';
+export default WsRadio;

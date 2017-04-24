@@ -151,14 +151,10 @@
   }
 </style>
 <script>
-  import wsButton from '../../../packages/button/src/button'
   export default {
     data () {
       return {
       }
-    },
-    components: {
-      wsButton
     }
   }
 </script>

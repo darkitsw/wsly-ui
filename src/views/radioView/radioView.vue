@@ -14,15 +14,11 @@
  }
 </style>
 <script>
-  import wsRadio from '../../../packages/radio'
   export default {
     data () {
       return {
         radio: '1'
       }
-    },
-    components: {
-      wsRadio
     }
   }
 </script>

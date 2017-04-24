@@ -21,7 +21,7 @@
   import Emitter from '../../../src/mixins/emitter';
   export default {
     mixins: [Emitter],
-    name: 'WsOption',
+    name: 'ws-option',
     componentName: 'WSOption',
     data () {
       return {

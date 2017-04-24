@@ -1,2 +1,2 @@
-import WSButton from './src/button';
-export default WSButton;
+import WsButton from './src/button';
+export default WsButton;

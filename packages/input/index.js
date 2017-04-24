@@ -1,2 +1,2 @@
-import WSInput from './src/input';
-export default WSInput;
+import WsInput from './src/input';
+export default WsInput;

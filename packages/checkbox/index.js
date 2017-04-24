@@ -1,2 +1,2 @@
-import WSCheckbox from './src/checkbox';
-export default WSCheckbox;
+import WsCheckbox from './src/checkbox';
+export default WsCheckbox;

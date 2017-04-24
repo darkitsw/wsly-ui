@@ -11,7 +11,6 @@
 <style lang="scss">
 </style>
 <script>
-  import wsCheckbox from '../../../packages/checkbox'
   export default {
     data () {
       return {
@@ -19,9 +18,6 @@
         checkbox2: true,
         checkbox3: true
       }
-    },
-    components: {
-      wsCheckbox
     }
   }
 </script>
