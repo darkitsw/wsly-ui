@@ -6,12 +6,6 @@ import router from './router'
 
 import wsly from '../packages'
 
-import WSInput from '../packages/input'
-import WSButton from '../packages/button'
-
-Vue.component('ws-input', WSInput)
-Vue.component('ws-button', WSButton)
-
 Vue.use(wsly)
 
 Vue.config.productionTip = false
