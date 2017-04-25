@@ -5,7 +5,9 @@
 
 ## Install
 
+```shell
 npm install wsly-ui -S
+```
 
 ### Quick Start
 
@@ -15,3 +17,5 @@ import WSLY from 'wsly-ui'
 
 Vue.use(WSLY)
 ```
+
+### test

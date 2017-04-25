@@ -5,7 +5,6 @@ import App from './App'
 import router from './router'
 
 import wsly from '../packages'
-
 Vue.use(wsly)
 
 Vue.config.productionTip = false

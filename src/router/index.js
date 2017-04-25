@@ -72,6 +72,10 @@ const routes = [
   {
     path: '/resource',
     name: 'resource'
+  },
+  {
+    path: '*',
+    redirect: '/guide/installation'
   }
 ]
 
