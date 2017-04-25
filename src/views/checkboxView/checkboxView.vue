@@ -4,7 +4,8 @@
     <div class="page-container">
       <ws-checkbox class="checkbox" v-model="checkbox1" checkName="隐藏未选中" disabled="disabled">备选项1</ws-checkbox>
       <ws-checkbox class="checkbox" v-model="checkbox2" checkName="选中并隐藏" disabled="disabled">备选项2</ws-checkbox>
-      <ws-checkbox class="checkbox" v-model="checkbox3" >备选项3</ws-checkbox>
+      <ws-checkbox class="checkbox" v-model="checkbox3" checkName="选中并隐藏" disabled="disabled">备选项3</ws-checkbox>
+      <ws-checkbox class="checkbox" v-model="checkbox4" >备选项4</ws-checkbox>
     </div>
   </div>
 </template>
