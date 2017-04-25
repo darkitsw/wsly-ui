@@ -1,13 +1,14 @@
 <template>
   <div class="ws-input-wrap">
     <input class="ws-input"
-      :value="currentValue"
-      @input="handleInput"
-      @blur="handleBlur"
-      @focus="handleFocus"
-      :placeholder="placeholder"
-      :disabled="disabled"
-      type="text" />
+           :value="currentValue"
+           @input="handleInput"
+           @blur="handleBlur"
+           @focus="handleFocus"
+           :readonly="readonly"
+           :placeholder="placeholder"
+           :disabled="disabled"
+           type="text" />
   </div>
 </template>
 <style lang="scss">
@@ -22,6 +23,7 @@
       transition: .3s;
       &:hover {
         border-color: #546887;
+        cursor: pointer;
       }
       &:focus {
         border-color: #1b9de8;
@@ -40,6 +42,7 @@
     props: {
       value: [String, Number],
       placeholder: String,
+      readonly: Boolean,
       disabled: {
         type: Boolean,
         default: false

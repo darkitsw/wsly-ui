@@ -11,6 +11,7 @@
         @input="handleInput"
         @blur="handleBlur"
         @focus="handleFocus"
+        :readonly="true"
         :disabled="disabled"
       ></ws-input>
       <!-- 单选 -->
