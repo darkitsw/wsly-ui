@@ -5,7 +5,9 @@
 
 ## Install
 
+```shell
 npm install wsly-ui -S
+```
 
 ### Quick Start
 
