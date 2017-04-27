@@ -62,6 +62,7 @@ export default {
 
   .main {
     width: 1140px;
+    min-height: 100vh;
     margin: 20px auto;
     background: #fff;
     border: 1px solid #EDEDEE;

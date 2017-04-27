@@ -1,7 +1,7 @@
 <template>
   <div class="page-container clearfix">
     <div class="row-left">
-    <span class="title">组件版本 V.01</span>
+    <span class="title">组件版本 V0.0.1</span>
       <ul>
         <li v-for="s in navData">
           <span>{{s.name}}</span>
@@ -20,10 +20,11 @@
   .page-container {
     .row-left {
       width: 298px;
+      min-height: 100vh;
       float: left;
       border-right: 2px solid #EDEDEE;
       .title{
-        padding: 0px 30px;
+        margin: 0 30px;
         height: 60px;
         width: 238px;
         line-height: 60px;
