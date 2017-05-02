@@ -3,6 +3,7 @@ import WsButton from './button/'
 import WsCheckbox from './checkbox/'
 import WsInput from './input/'
 import WsRadio from './radio/'
+import WsSlider from './slider/'
 
 const components = [
   WsSelect,
@@ -10,7 +11,8 @@ const components = [
   WsButton,
   WsCheckbox,
   WsInput,
-  WsRadio
+  WsRadio,
+  WsSlider
 ]
 
 const install = function (Vue, opts = {}) {

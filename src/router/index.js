@@ -9,6 +9,7 @@ import select from '../views/selectView/selectView'
 import color from '../views/colorView/colorView'
 import radio from '../views/radioView/radioView'
 import checkbox from '../views/checkboxView/checkboxView'
+import slider from '../views/sliderView/sliderView'
 
 Vue.use(Router)
 const routes = [
@@ -66,6 +67,11 @@ const routes = [
         path: 'checkbox',
         name: 'checkbox',
         component: checkbox
+      },
+      {
+        path: 'slider',
+        name: 'slider',
+        component: slider
       }
     ]
   },

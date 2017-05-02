@@ -1,5 +1,5 @@
-import WsSelect from './src/select.vue'
-import WsOption from './src/option.vue'
+import WsSelect from './src/select'
+import WsOption from './src/option'
 export {
   WsSelect,
   WsOption

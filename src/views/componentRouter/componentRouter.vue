@@ -140,6 +140,10 @@
               {
                 name: 'select选择器',
                 label: 'select'
+              },
+              {
+                name: 'slider滑块',
+                label: 'slider'
               }
             ]
           }
