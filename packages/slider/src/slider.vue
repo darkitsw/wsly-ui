@@ -137,6 +137,40 @@
   .ws-slider-dot.ws-slider-always .ws-slider-tooltip {
     display: block!important;
   }
+
+  .ws-slider-process {
+    position: absolute;
+    border-radius: 15px;
+    background-color: #3498db;
+    transition: all 0s;
+    z-index: 1;
+  }
+  .ws-slider-horizontal .ws-slider-process {
+    width: 0;
+    height: 100%;
+    top: 0;
+    left: 0;
+    will-change: width;
+  }
+  .ws-slider-vertical .ws-slider-process {
+    width: 100%;
+    height: 0;
+    bottom: 0;
+    left: 0;
+    will-change: height;
+  }
+  .ws-slider-horizontal-reverse .ws-slider-process {
+    width: 0;
+    height: 100%;
+    top: 0;
+    right: 0;
+  }
+  .ws-slider-vertical-reverse .ws-slider-process {
+    width: 100%;
+    height: 0;
+    top: 0;
+    left: 0;
+  }
 </style>
 <script>
   export default {
@@ -379,7 +413,8 @@
     },
     watch: {
       value (val) {
-        this.flag || this.setValue(val, true)
+//        this.flag || this.setValue(val, true)
+        this.setIndex(val)
       },
       max (val) {
         let resetVal = this.limitValue(this.val)
@@ -400,6 +435,26 @@
       }
     },
     methods: {
+      getStaticData () {
+        if (this.$refs.elem) {
+          this.size = this.direction === 'vertical' ? this.$refs.elem.offsetHeight : this.$refs.elem.offsetWidth
+          this.offset = this.direction === 'vertical' ? (this.$refs.elem.getBoundingClientRect().top + window.pageYOffset || document.documentElement.scrollTop) : this.$refs.elem.getBoundingClientRect().left
+        }
+      },
+      setValue (val, noCb, speed) {
+        if (this.isDiff(this.val, val)) {
+          let resetVal = this.limitValue(val)
+          if (resetVal !== false) {
+            this.val = this.isRange ? resetVal.concat() : resetVal
+          } else {
+            this.val = this.isRange ? val.concat() : val
+          }
+          this.syncValue(noCb)
+        }
+        this.$nextTick(() => {
+          this.setPosition(speed)
+        })
+      },
       bindEvents () {
         document.addEventListener('mousemove', this.moving)
         document.addEventListener('mouseup', this.moveEnd)
@@ -509,20 +564,6 @@
           this.setCurrentValue(val)
         }
       },
-      setValue (val, noCb, speed) {
-        if (this.isDiff(this.val, val)) {
-          let resetVal = this.limitValue(val)
-          if (resetVal !== false) {
-            this.val = this.isRange ? resetVal.concat() : resetVal
-          } else {
-            this.val = this.isRange ? val.concat() : val
-          }
-          this.syncValue(noCb)
-        }
-        this.$nextTick(() => {
-          this.setPosition(speed)
-        })
-      },
       setPosition (speed) {
         this.flag || this.setTransitionTime(speed === undefined ? this.speed : speed)
         if (this.isRange) {
@@ -606,18 +647,18 @@
         noCb || this.$emit('callback', this.val)
         this.$emit('input', this.isRange ? this.val.concat() : this.val)
       },
-      getStaticData () {
-        if (this.$refs.elem) {
-          this.size = this.direction === 'vertical' ? this.$refs.elem.offsetHeight : this.$refs.elem.offsetWidth
-          this.offset = this.direction === 'vertical' ? (this.$refs.elem.getBoundingClientRect().top + window.pageYOffset || document.documentElement.scrollTop) : this.$refs.elem.getBoundingClientRect().left
-        }
-      },
       refresh () {
         if (this.$refs.elem) {
           this.getStaticData()
           this.setPosition()
         }
       }
+    },
+    created () {
+      window.addEventListener('resize', this.refresh)
+    },
+    beforeDestroy () {
+      this.unbindEvents()
     }
   }
 </script>

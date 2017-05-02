@@ -55,7 +55,7 @@
             bgStyle: null,           // 组件背景样式
             sliderStyle: null,       // 滑块样式
             tooltipStyle: null,      // 工具提示样式
-            processStyle: null,      // 进度条样式
+            processStyle: {height: '6px'},      // 进度条样式
             piecewiseStyle: null     // 分割点样式
           }
         }
