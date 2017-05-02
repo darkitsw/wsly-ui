@@ -1,7 +1,7 @@
 <template>
   <div class="main-footer">
     <footer>
-      <span>版权所有 - WSLY</span>
+      <span> &copy; 版权所有 - WSLY</span>
     </footer>
   </div>
 </template>
